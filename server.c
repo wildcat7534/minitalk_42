@@ -6,7 +6,7 @@
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 16:30:20 by cmassol           #+#    #+#             */
-/*   Updated: 2024/10/08 16:18:06 by cmassol          ###   ########.fr       */
+/*   Updated: 2024/10/08 17:24:23 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,9 @@ int main(void) {
   sigaction(SIGUSR1, &sa, NULL);
   sigaction(SIGUSR2, &sa, NULL);
   sigaction(SIGTERM, &sa, NULL);
+  
   pid = getpid();
+  
   ft_printf("The process ID is %d\n", pid);
   write(1, "Waiting for signals...\n", 23);
   write(1, "Press Ctrl+C to stop the server\n\n", 32);
