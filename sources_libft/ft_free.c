@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmassol <cmassol@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 17:31:05 by cmassol           #+#    #+#             */
-/*   Updated: 2024/10/13 17:25:44 by cmassol          ###   ########.fr       */
+/*   Created: 2024/10/13 17:06:43 by cmassol           #+#    #+#             */
+/*   Updated: 2024/10/13 17:24:44 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "../include/libft.h"
 
-# include "ft_printf.h"
-# include "libft.h"
-# include <signal.h>
-# include <stdlib.h>
-# include <string.h>
-# include <sys/types.h>
-# include <unistd.h>
+void	ft_free(t_lst_char *lst)
+{
+	t_lst_char	*tmp;
 
-#endif
+	while (lst)
+	{
+		tmp = lst;
+		lst = lst->next;
+		free(tmp);
+	}
+}

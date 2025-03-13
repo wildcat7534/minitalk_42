@@ -5,6 +5,7 @@ HEADERS = /libft.h ft_printf.h minitalk.h
 SOURCES = sources_ft_printf/ft_printf.c sources_ft_printf/ft_putcharlen.c sources_ft_printf/ft_putnbrhexlen.c \
 		sources_ft_printf/ft_putnbrlen.c sources_ft_printf/ft_putptrlen.c sources_ft_printf/ft_putstrlen.c \
 		sources_libft/ft_strlen.c sources_libft/ft_atoi.c sources_libft/ft_itoa.c sources_libft/ft_isdigit.c \
+		sources_libft/ft_free.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
